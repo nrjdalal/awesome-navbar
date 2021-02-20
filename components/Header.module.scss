@@ -1,0 +1,82 @@
+@import 'styles/dev';
+
+.header {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+
+  background-color: whitesmoke;
+  border-bottom: 1px solid #eeeeee;
+  width: 100%;
+
+  > div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    height: 60px;
+    margin: 0 2.5%;
+    width: 100%;
+    max-width: 1080px;
+
+    img {
+      height: 40px;
+    }
+
+    nav {
+      ul {
+        display: flex;
+
+        li {
+          font-size: 18px;
+          font-weight: 500;
+          letter-spacing: 2px;
+          margin-left: 40px;
+          text-transform: uppercase;
+        }
+      }
+
+      @include tablet {
+        position: absolute;
+        top: 0;
+
+        background-color: whitesmoke;
+        margin-top: 61px;
+        transition: all 1s ease-in-out;
+        width: 100%;
+
+        ul {
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+
+          height: calc(100vh - 61px);
+
+          li {
+            margin: 20px 0;
+          }
+        }
+      }
+    }
+
+    div {
+      display: none;
+
+      @include tablet {
+        display: block;
+      }
+
+      span {
+        display: block;
+
+        background-color: black;
+        border-radius: 5px;
+        height: 3.75px;
+        margin: 5px 0;
+        margin-left: 7px;
+        transition: all 1s ease-in-out;
+        width: 32px;
+      }
+    }
+  }
+}
